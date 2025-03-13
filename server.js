@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/', {
+mongoose.connect('mongodb+srv://maazawan100:maazawan2004@cluster0.g4ozi.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
