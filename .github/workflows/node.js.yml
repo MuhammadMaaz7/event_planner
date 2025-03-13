@@ -16,11 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: setup node
+        uses: actions/setup-nodev2
+        with:
+          node-version: '20'
+
       - name: Install dependencies
         run: npm install
 
-      - name: Start server
-        run: node server.js
+      - run: npm run build
 
   test:
     runs-on: ubuntu-latest
