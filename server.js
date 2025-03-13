@@ -17,9 +17,11 @@ mongoose.connect('mongodb://localhost:27017/', {
     console.error('Failed to connect to MongoDB', err);
 });
 
+
 app.use('/events', eventRoutes);
 app.use('/users', userRoutes);
 
+//Listening on port
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
